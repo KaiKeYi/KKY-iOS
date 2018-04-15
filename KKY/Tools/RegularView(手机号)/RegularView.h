@@ -1,0 +1,5 @@
+#import <UIKit/UIKit.h>
+
+@interface RegularView : UITextField
+
+@end

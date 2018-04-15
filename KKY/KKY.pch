@@ -1,0 +1,84 @@
+//
+//  KKY.pch
+//  KKY
+//
+//  Created by Jason on 2018/3/29.
+//  Copyright © 2018年 hzb. All rights reserved.
+//
+
+#ifndef KKY_pch
+#define KKY_pch
+
+/****************************头文件*****************************/
+#ifdef __OBJC__
+
+#import "ServerUrl.h"
+#import "AEAlertView.h"
+#import "ZBAlertView.h"
+#import "Utils.h"
+#import "AEIndicator.h"
+#import "JHHJView.h"
+#import "NetworkManager.h"
+#import "UIView+Extension.h"
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "MJExtension.h"
+#import "DefaultView.h"
+#import "AESCrypt.h"
+#import "UserInfo.h"
+#import "AEFilePath.h"
+#import "BaseWebVC.h"
+
+#endif
+
+#define kCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+/******************************通知****************************/
+
+#define kLoginSuccNotification  @"kLoginSuccNotification"
+#define kLogoutSuccNotification  @"kLogoutSuccNotification"
+#define kUpdateInfoSuccNotification  @"kUpdateInfoSuccNotification"
+#define kCameraBindSuccNotification  @"kCameraBindSuccNotification"
+#define kEnterForgroundNotification  @"kEnterForgroundNotification"
+#define kRechargeSuccNotification  @"kRechargeSuccNotification"
+#define kPaySuccNotification  @"kPaySuccNotification"
+
+/********************屏幕宽高、系统版本、手机型号******************/
+
+#define SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
+#define WIDTH  [[UIScreen mainScreen] bounds].size.width
+#define HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define kNavBarH (IS_IPhoneX?88:64)
+#define kStatusBarH (IS_IPhoneX?44:20)
+#define IS_IOS_11 ([[[UIDevice currentDevice] systemVersion] floatValue]>=11.0)
+#define IS_IPhoneX (CGSizeEqualToSize(CGSizeMake(375.f, 812.f), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f), [UIScreen mainScreen].bounds.size))
+
+/*****************************颜色*****************************/
+
+#define AEColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define kColorFromARGBHex(value,a) [UIColor colorWithRed:((float)((value & 0xFF0000) >> 16))/255.0 green:((float)((value & 0xFF00) >> 8))/255.0 blue:((float)(value & 0xFF))/255.0 alpha:a] //a:透明度
+#define kColorFromRGBHex(value) [UIColor colorWithRed:((float)((value & 0xFF0000) >> 16))/255.0 green:((float)((value & 0xFF00) >> 8))/255.0 blue:((float)(value & 0xFF))/255.0 alpha:1.0]
+
+#define AppThemeColor kColorFromRGBHex(0x37C7FD)
+#define PageColor kColorFromRGBHex(0xF7F7F7)
+#define GreenColor kColorFromRGBHex(0x00A8FF)
+#define LightBlackColor [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8]
+#define LineColor kColorFromRGBHex(0xb2b2b2)
+#define WhiteColor kColorFromRGBHex(0xFFFFFF)
+#define BlackColor kColorFromRGBHex(0x000000)
+#define Status_OrangeColor kColorFromRGBHex(0xFF8800)
+#define Status_BlueColor kColorFromRGBHex(0x54CBFF)
+#define Status_GreenColor kColorFromRGBHex(0x7BD500)
+#define Status_GrayColor kColorFromRGBHex(0xEDEDED)
+#define Status_DeepGreenColor kColorFromRGBHex(0x02AF00)
+
+/**
+ *  完美解决Xcode NSLog打印不全的宏 亲测目前支持到8.2bate版
+ */
+#ifdef DEBUG
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
+#else
+#define NSLog(format, ...)
+#endif
+
+#endif /* KKY_pch */
