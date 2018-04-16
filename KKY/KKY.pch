@@ -61,11 +61,13 @@
 
 #define AppThemeColor kColorFromRGBHex(0x37C7FD)
 #define PageColor kColorFromRGBHex(0xF7F7F7)
-#define GreenColor kColorFromRGBHex(0x00A8FF)
+#define BlueColor kColorFromRGBHex(0x00A8FF)
+#define GreenColor kColorFromRGBHex(0x7AD300)
 #define LightBlackColor [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8]
 #define LineColor kColorFromRGBHex(0xb2b2b2)
 #define WhiteColor kColorFromRGBHex(0xFFFFFF)
 #define BlackColor kColorFromRGBHex(0x000000)
+#define BorderGrayColor kColorFromRGBHex(0xCCCCCC)
 #define Status_OrangeColor kColorFromRGBHex(0xFF8800)
 #define Status_BlueColor kColorFromRGBHex(0x54CBFF)
 #define Status_GreenColor kColorFromRGBHex(0x7BD500)

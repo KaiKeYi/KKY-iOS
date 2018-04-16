@@ -302,12 +302,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="bCL-OC-BP3" userLabel="BaseView">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="bCL-OC-BP3" userLabel="ScrollView" customClass="BaseScrollView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="Kmu-D7-C9o">
-                                        <rect key="frame" x="8" y="8" width="359" height="90"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="Kmu-D7-C9o">
+                                        <rect key="frame" x="10" y="10" width="355" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" id="AfH-FF-2hT">
@@ -315,21 +315,21 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="游泳-中池区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="MBI-C9-y5a">
-                                                <rect key="frame" x="90" y="12" width="254" height="20"/>
+                                                <rect key="frame" x="90" y="12" width="250" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="老师：小韩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LoL-Jo-Sjm">
-                                                <rect key="frame" x="90" y="39" width="254" height="14"/>
+                                                <rect key="frame" x="90" y="39" width="250" height="14"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约成功：0人次" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cer-LD-Nab">
-                                                <rect key="frame" x="90" y="62" width="254" height="15"/>
+                                                <rect key="frame" x="90" y="62" width="250" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                 <nil key="textColor"/>
@@ -343,35 +343,40 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LVe-KK-0Vq">
-                                        <rect key="frame" x="10" y="115" width="355" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="预约时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LVe-KK-0Vq">
+                                        <rect key="frame" x="10" y="110" width="355" height="20"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="仅显示7天内的预约信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0d-KG-xLx">
-                                        <rect key="frame" x="10" y="135" width="355" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="仅显示7天内的预约信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e0d-KG-xLx">
+                                        <rect key="frame" x="10" y="130" width="355" height="20"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.38034743070602417" green="0.38041785359382629" blue="0.38034301996231079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" id="UOY-DP-RaJ">
-                                        <rect key="frame" x="8" y="160" width="359" height="80"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="UOY-DP-RaJ">
+                                        <rect key="frame" x="10" y="155" width="355" height="80"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsVerticalScrollIndicator="NO" id="jZt-B3-U8L" customClass="BaseScrollView">
-                                                <rect key="frame" x="0.0" y="5" width="359" height="50"/>
+                                                <rect key="frame" x="0.0" y="5" width="355" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="M3g-fh-JJL" id="GM2-eB-MUN"/>
                                                 </connections>
                                             </scrollView>
-                                            <view contentMode="scaleToFill" misplaced="YES" id="bzd-Z1-PJd">
-                                                <rect key="frame" x="0.0" y="60" width="359" height="1"/>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="bzd-Z1-PJd">
+                                                <rect key="frame" x="0.0" y="60" width="355" height="1"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.93323183059692383" green="0.9333917498588562" blue="0.93322181701660156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" id="4Sf-Z9-a7M">
+                                                <rect key="frame" x="0.0" y="61" width="355" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -382,8 +387,41 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wyx-B5-kMh">
+                                <rect key="frame" x="70" y="622" width="235" height="35"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.13345146179199219" green="0.71650010347366333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="立即预约">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="orderAction:" destination="M3g-fh-JJL" eventType="touchUpInside" id="fEe-85-rKy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zYy-ac-2xq">
+                                <rect key="frame" x="325" y="621" width="40" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.90970492362976074" green="0.90986090898513794" blue="0.9096950888633728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="清空">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clearAction:" destination="M3g-fh-JJL" eventType="touchUpInside" id="BN5-Cl-4nE"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
@@ -392,8 +430,11 @@
                         <outlet property="courseView" destination="UOY-DP-RaJ" id="Fj8-ke-kd8"/>
                         <outlet property="dateCountLab" destination="e0d-KG-xLx" id="QrB-4y-Cjg"/>
                         <outlet property="dateScrollView" destination="jZt-B3-U8L" id="zZT-q2-JFU"/>
+                        <outlet property="dividerView" destination="bzd-Z1-PJd" id="GCa-Yy-ikK"/>
                         <outlet property="imgView" destination="AfH-FF-2hT" id="N6D-fX-FWW"/>
+                        <outlet property="scrollView" destination="bCL-OC-BP3" id="uI4-eZ-J8S"/>
                         <outlet property="teacherLab" destination="LoL-Jo-Sjm" id="jjn-Mt-ZHl"/>
+                        <outlet property="timeView" destination="4Sf-Z9-a7M" id="eU8-84-yp6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXj-AT-4RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -580,6 +621,6 @@
         <image name="order" width="20" height="20"/>
         <image name="order_selected" width="20" height="20"/>
         <image name="password" width="18" height="20"/>
-        <image name="phone" width="15" height="20"/>
+        <image name="phone" width="24" height="24"/>
     </resources>
 </document>

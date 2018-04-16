@@ -14,6 +14,8 @@
 
 @property (nonatomic,retain) CourseInfo *info;
 
+
+@property (weak, nonatomic) IBOutlet BaseScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *courseLab;
 @property (weak, nonatomic) IBOutlet UILabel *teacherLab;
@@ -21,6 +23,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateCountLab;
 @property (weak, nonatomic) IBOutlet UIView *courseView;
 @property (weak, nonatomic) IBOutlet BaseScrollView *dateScrollView;
+@property (weak, nonatomic) IBOutlet UIView *dividerView;
+@property (weak, nonatomic) IBOutlet UIView *timeView;
 
+- (IBAction)orderAction:(id)sender;
+- (IBAction)clearAction:(id)sender;
 
 @end

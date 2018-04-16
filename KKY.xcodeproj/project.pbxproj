@@ -84,7 +84,7 @@
 		9681D0A5206E6F6D003DAD1C /* RegularView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9681D0A4206E6F6D003DAD1C /* RegularView.m */; };
 		968D99582076FF6A00FE5B63 /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 968D99562076FF6A00FE5B63 /* OrderCell.m */; };
 		968D99592076FF6A00FE5B63 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D99572076FF6A00FE5B63 /* OrderCell.xib */; };
-		96A1DE622078F66B0052E30F /* AppointDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DE612078F66B0052E30F /* AppointDetailVC.m */; };
+		9691FD3320843ABA004C41C9 /* AppointDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9691FD3220843ABA004C41C9 /* AppointDetailVC.m */; };
 		96A1DE652079B0320052E30F /* BaseNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A1DE642079B0320052E30F /* BaseNavBar.m */; };
 		96C122722083036E004506D9 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C122712083036E004506D9 /* BaseScrollView.m */; };
 		96CBBAEA20809C16008E0F66 /* DateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CBBAE920809C16008E0F66 /* DateInfo.m */; };
@@ -253,8 +253,8 @@
 		968D99552076FF6A00FE5B63 /* OrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
 		968D99562076FF6A00FE5B63 /* OrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
 		968D99572076FF6A00FE5B63 /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		9691FD3220843ABA004C41C9 /* AppointDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppointDetailVC.m; sourceTree = "<group>"; };
 		96A1DE602078F66B0052E30F /* AppointDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppointDetailVC.h; sourceTree = "<group>"; };
-		96A1DE612078F66B0052E30F /* AppointDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppointDetailVC.m; sourceTree = "<group>"; };
 		96A1DE632079B0320052E30F /* BaseNavBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavBar.h; sourceTree = "<group>"; };
 		96A1DE642079B0320052E30F /* BaseNavBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavBar.m; sourceTree = "<group>"; };
 		96C122702083036E004506D9 /* BaseScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
@@ -636,12 +636,12 @@
 				9681D014206CF8DD003DAD1C /* BaseNC.m */,
 				96A1DE632079B0320052E30F /* BaseNavBar.h */,
 				96A1DE642079B0320052E30F /* BaseNavBar.m */,
+				96C122702083036E004506D9 /* BaseScrollView.h */,
+				96C122712083036E004506D9 /* BaseScrollView.m */,
 				9681D011206CF8DD003DAD1C /* BaseWebVC.h */,
 				9681D015206CF8DD003DAD1C /* BaseWebVC.m */,
 				9681D012206CF8DD003DAD1C /* WKDelegateController.h */,
 				9681D00E206CF8DD003DAD1C /* WKDelegateController.m */,
-				96C122702083036E004506D9 /* BaseScrollView.h */,
-				96C122712083036E004506D9 /* BaseScrollView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -701,7 +701,7 @@
 				9681D08A206D025D003DAD1C /* AppointmentVC.h */,
 				9681D08B206D025D003DAD1C /* AppointmentVC.m */,
 				96A1DE602078F66B0052E30F /* AppointDetailVC.h */,
-				96A1DE612078F66B0052E30F /* AppointDetailVC.m */,
+				9691FD3220843ABA004C41C9 /* AppointDetailVC.m */,
 			);
 			path = "预约";
 			sourceTree = "<group>";
@@ -924,7 +924,6 @@
 				9681D063206CF8DD003DAD1C /* TapImageView.m in Sources */,
 				9681D048206CF8DD003DAD1C /* NewPagedFlowView.m in Sources */,
 				96CBBAED20809CF1008E0F66 /* TimeInfo.m in Sources */,
-				96A1DE622078F66B0052E30F /* AppointDetailVC.m in Sources */,
 				9681D059206CF8DD003DAD1C /* AEUITextField.m in Sources */,
 				9681CF7F206CCE76003DAD1C /* main.m in Sources */,
 				96C122722083036E004506D9 /* BaseScrollView.m in Sources */,
@@ -973,6 +972,7 @@
 				9681D06F206CF8DD003DAD1C /* BaseWebVC.m in Sources */,
 				9681D062206CF8DD003DAD1C /* AEIndicator.m in Sources */,
 				9681D03D206CF8DD003DAD1C /* UIImage+Color.m in Sources */,
+				9691FD3320843ABA004C41C9 /* AppointDetailVC.m in Sources */,
 				9681D03F206CF8DD003DAD1C /* NSArray+Log.m in Sources */,
 				9681D068206CF8DD003DAD1C /* AEMoreView.m in Sources */,
 				9681CF71206CCE76003DAD1C /* AppDelegate.m in Sources */,
