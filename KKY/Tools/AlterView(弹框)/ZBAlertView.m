@@ -8,7 +8,6 @@
 
 #import "ZBAlertView.h"
 #import "FXBlurView.h" //模糊视图
-#import "UIView+Animation.h"
 
 @interface ZBAlertView ()
 {

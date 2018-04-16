@@ -7,7 +7,6 @@
 //
 
 #import "AEUpdateView.h"
-#import "UIView+Animation.h"
 
 @interface AEUpdateView ()
 {

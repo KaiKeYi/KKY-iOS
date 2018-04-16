@@ -8,17 +8,22 @@
 
 #import "AppointDetailVC.h"
 #import "OptionBarController.h"
+#import "ZBSelectView.h"
 #import "DateInfo.h"
 #import "TimeInfo.h"
+#import "TeacherInfo.h"
 
 @interface AppointDetailVC ()
 {
     NSMutableArray *_dateArr;
     NSMutableArray *_timeArr;
+    NSMutableArray *_teacherArr;
     DateInfo *_selectDateInfo;
     TimeInfo *_selectTimeInfo;
+    TeacherInfo *_selectTeacherInfo;
+    NSInteger _selectDateIndex;
+    NSInteger _selectTimeIndex;
     CGFloat itemDateWidth;
-    NSInteger lastIndex;
     UIView *lineView;
 }
 @end
@@ -34,6 +39,7 @@
 
     _dateArr = [NSMutableArray array];
     _timeArr = [NSMutableArray array];
+    _teacherArr = [NSMutableArray array];
     self.scrollView.frame = CGRectMake(0, kNavBarH, WIDTH, HEIGHT-kNavBarH);
     
     [self getDateList];
@@ -153,6 +159,51 @@
     }];
 }
 
+//获取教师列表
+- (void)getTeacherList {
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         self.info.course, @"course",
+                         self.info.classroom, @"classroom",
+                         _selectDateInfo.date, @"date",
+                         _selectTimeInfo.time_start, @"time_start",
+                         [UserInfo share].token, @"token",
+                         [UserInfo share].dealerno, @"dealerno",
+                         nil];
+    [[NetworkManager sharedManager] postJSON:URL_AvaliableTeachersList parameters:dic imageDataArr:nil imageName:nil completion:^(id responseData, RequestState status, NSError *error) {
+        
+        if (status == Request_Success) {
+            
+            _teacherArr = [TeacherInfo mj_objectArrayWithKeyValuesArray:(NSArray *)responseData];
+            
+            NSMutableArray *nameArr = [NSMutableArray array];
+            for (int i = 0; i<_teacherArr.count; i++) {
+                TeacherInfo *info = _teacherArr[i];
+                [nameArr addObject:info.name];
+            }
+            
+            ZBSelectView *selectView = [[ZBSelectView alloc] initWithTitle:@"教师选择" contentText:nameArr baseView:self.view];
+            selectView.animationStyle = ASAnimationNO;
+            selectView.doneBlock = ^(NSInteger index) {
+                _selectTeacherInfo = _teacherArr[index];
+                for (int i = 0; i<_timeArr.count; i++) {
+                    UIButton *btn = [self.view viewWithTag:10000+i];
+                    UIImageView *imgView = [self.view viewWithTag:20000+i];
+                    if (i==_selectTimeIndex) {
+                        imgView.hidden = NO;
+                        btn.layer.borderColor = GreenColor.CGColor;
+                        [btn setTitle:[NSString stringWithFormat:@"%@ %@",_selectTimeInfo.time_start,_selectTeacherInfo.name] forState:UIControlStateNormal];
+                    } else {
+                        imgView.hidden = YES;
+                        btn.layer.borderColor = BorderGrayColor.CGColor;
+                        [btn setTitle:[NSString stringWithFormat:@"%@ 请选择",_selectTimeInfo.time_start] forState:UIControlStateNormal];
+                    }
+                }
+            };
+        }
+    }];
+}
+
 #pragma mark - methods
 
 //选择日期
@@ -169,8 +220,8 @@
         }
     }
     
-    NSInteger count = btn.tag-lastIndex;
-    lastIndex = btn.tag;
+    NSInteger count = btn.tag-_selectDateIndex;
+    _selectDateIndex = btn.tag;
 
     CGFloat offX = _dateScrollView.contentSize.width-_dateScrollView.width;
     if (count>0) {
@@ -187,17 +238,9 @@
 //选择时间
 - (void)selectTime:(UIButton *)btn {
     NSInteger index = btn.tag-10000;
-    for (int i = 0; i<_timeArr.count; i++) {
-        UIButton *btn = [self.view viewWithTag:10000+i];
-        UIImageView *imgView = [self.view viewWithTag:20000+i];
-        if (i==index) {
-            imgView.hidden = NO;
-            btn.layer.borderColor = GreenColor.CGColor;
-        } else {
-            imgView.hidden = YES;
-            btn.layer.borderColor = BorderGrayColor.CGColor;
-        }
-    }
+    _selectTimeIndex = index;
+    _selectTimeInfo = _timeArr[index];
+    [self getTeacherList]; //获取教师列表
 }
 
 #pragma mark - methods

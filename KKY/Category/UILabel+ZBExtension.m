@@ -1,12 +1,12 @@
 //
-//  UILabel+Add.m
-//  ArtEast
+//  UILabel+ZBExtension.m
+//  KKY
 //
-//  Created by yibao on 16/9/21.
-//  Copyright © 2016年 北京艺宝网络文化有限公司. All rights reserved.
+//  Created by Jason on 2018/4/16.
+//  Copyright © 2018年 hzb. All rights reserved.
 //
 
-#import "UILabel+Add.h"
+#import "UILabel+ZBExtension.h"
 #import <objc/runtime.h>
 #import <CoreText/CoreText.h>
 

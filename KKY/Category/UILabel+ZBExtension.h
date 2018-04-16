@@ -1,14 +1,14 @@
 //
-//  UILabel+Add.h
-//  ArtEast
+//  UILabel+ZBExtension.h
+//  KKY
 //
-//  Created by yibao on 16/9/21.
-//  Copyright © 2016年 北京艺宝网络文化有限公司. All rights reserved.
+//  Created by Jason on 2018/4/16.
+//  Copyright © 2018年 hzb. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UILabel (Add)
+@interface UILabel (ZBExtension)
 
 /**
  *  字间距

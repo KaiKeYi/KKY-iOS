@@ -19,7 +19,7 @@
 #import "AEIndicator.h"
 #import "JHHJView.h"
 #import "NetworkManager.h"
-#import "UIView+Extension.h"
+#import "ZBExtension.h"
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
 #import "MJExtension.h"
@@ -64,7 +64,7 @@
 #define BlueColor kColorFromRGBHex(0x00A8FF)
 #define GreenColor kColorFromRGBHex(0x7AD300)
 #define LightBlackColor [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8]
-#define LineColor kColorFromRGBHex(0xb2b2b2)
+#define LineColor kColorFromRGBHex(0xEEEEEE)
 #define WhiteColor kColorFromRGBHex(0xFFFFFF)
 #define BlackColor kColorFromRGBHex(0x000000)
 #define BorderGrayColor kColorFromRGBHex(0xCCCCCC)

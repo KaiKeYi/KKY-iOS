@@ -14,7 +14,6 @@
 
 @property (nonatomic,retain) CourseInfo *info;
 
-
 @property (weak, nonatomic) IBOutlet BaseScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *courseLab;

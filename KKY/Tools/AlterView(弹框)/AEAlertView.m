@@ -24,9 +24,6 @@
 
 
 #import "AEAlertView.h"
-#import "UILabel+Add.h"
-#import "UIImage+Color.h"
-#import "UIView+Animation.h"
 
 @interface AEAlertView()
 @property (nonatomic,strong)UIWindow *alertWindow;

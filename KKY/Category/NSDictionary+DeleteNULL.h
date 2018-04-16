@@ -1,13 +1,15 @@
 //
 //  NSDictionary+DeleteNULL.h
-//  WashCarMerchantProject
+//  KKY
 //
-//  Created by mac on 2016/10/18.
-//  Copyright © 2016年 zrgg. All rights reserved.
+//  Created by Jason on 2018/4/16.
+//  Copyright © 2018年 hzb. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (DeleteNULL)
-+(id)changeType:(id)myObj; 
+
++(id)changeType:(id)myObj;
+
 @end

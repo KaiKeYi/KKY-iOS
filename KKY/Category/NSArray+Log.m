@@ -1,18 +1,18 @@
 //
 //  NSArray+Log.m
-//  MulanFarm
+//  KKY
 //
-//  Created by zyl on 17/3/10.
-//  Copyright © 2017年 cydf. All rights reserved.
+//  Created by Jason on 2018/4/16.
+//  Copyright © 2018年 hzb. All rights reserved.
 //
 
 #import "NSArray+Log.h"
 
 @implementation NSArray (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString*)descriptionWithLocale:(id)locale {
     
-    NSMutableString *str = [NSMutableString stringWithString:@"(\n"];
+    NSMutableString*str = [NSMutableString stringWithString:@"(\n"];
     
     [self enumerateObjectsUsingBlock:^(id obj,NSUInteger idx,BOOL *stop) {
         
@@ -23,14 +23,13 @@
     [str appendString:@")"];
     
     return str;
-    
 }
 
 @end
 
 @implementation NSDictionary (Log)
 
-- (NSString *)descriptionWithLocale:(id)locale {
+- (NSString*)descriptionWithLocale:(id)locale {
     
     NSMutableString *str = [NSMutableString stringWithString:@"{\n"];
     
@@ -43,7 +42,6 @@
     [str appendString:@"}\n"];
     
     return str;
-    
 }
 
 @end
