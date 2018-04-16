@@ -13,7 +13,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *headImgView;
 @property (weak, nonatomic) IBOutlet UILabel *namePhoneLab;
 @property (weak, nonatomic) IBOutlet UILabel *otherInfoLab;
-@property (weak, nonatomic) IBOutlet UIButton *shopLab;
+@property (weak, nonatomic) IBOutlet UIView *shopView;
+@property (weak, nonatomic) IBOutlet UIView *phoneView;
+@property (weak, nonatomic) IBOutlet UIButton *shopBtn;
+@property (weak, nonatomic) IBOutlet UIButton *phoneBtn;
+@property (weak, nonatomic) IBOutlet UIButton *exitBtn;
 
 - (IBAction)logoutAction:(id)sender;
 

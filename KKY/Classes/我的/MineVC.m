@@ -25,7 +25,17 @@
     self.headImgView.image = [UIImage imageNamed:@"head_img"];
     self.namePhoneLab.text = [NSString stringWithFormat:@"%@-%@",[UserInfo share].bbname,[UserInfo share].mobile];
     self.otherInfoLab.text = [NSString stringWithFormat:@"生日：%@ 性别：%@ 所在小区：%@",[UserInfo share].birthday,[UserInfo share].sex,[UserInfo share].dizhi];
-    [self.shopLab setTitle:[UserInfo share].shopname forState:UIControlStateNormal];
+    [self.shopBtn setTitle:[UserInfo share].shopname forState:UIControlStateNormal];
+    
+    if ([Utils isBlankString:[UserInfo share].shopphone]) {
+        self.phoneView.hidden = YES;
+        self.shopView.frame = CGRectMake(20, self.otherInfoLab.maxY+25, WIDTH-40, 44);
+        self.exitBtn.frame = CGRectMake(80, self.shopView.maxY+36, WIDTH-160, 40);
+    } else {
+        [self.phoneView setBorderWithView:self.phoneView top:YES left:NO bottom:NO right:NO borderColor:LineColor borderWidth:1];
+        [self.phoneBtn setTitle:[UserInfo share].shopphone forState:UIControlStateNormal];
+        self.phoneBtn.imageView.contentMode = UIViewContentModeScaleToFill;;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

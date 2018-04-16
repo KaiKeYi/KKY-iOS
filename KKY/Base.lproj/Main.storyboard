@@ -488,43 +488,73 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dn5-OJ-5Vy">
-                                        <rect key="frame" x="20" y="190" width="335" height="44"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" id="b5E-Vu-iaY">
+                                        <rect key="frame" x="20" y="190" width="335" height="88"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务门店：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DMD-W5-6LX">
-                                                <rect key="frame" x="20" y="0.0" width="80" height="44"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nKc-4B-LbT">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="44"/>
+                                            <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="dn5-OJ-5Vy">
+                                                <rect key="frame" x="10" y="0.0" width="315" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <inset key="titleEdgeInsets" minX="100" minY="0.0" maxX="20" maxY="0.0"/>
-                                                <state key="normal" title="鱼乐贝贝">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服务门店：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DMD-W5-6LX">
+                                                        <rect key="frame" x="20" y="0.0" width="80" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nKc-4B-LbT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <inset key="titleEdgeInsets" minX="100" minY="0.0" maxX="20" maxY="0.0"/>
+                                                        <state key="normal" title="鱼乐贝贝">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" id="Pk2-pz-rP0">
+                                                <rect key="frame" x="10" y="44" width="315" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="门店电话：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="shg-9k-iMG">
+                                                        <rect key="frame" x="20" y="0.0" width="80" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jib-rM-UoO">
+                                                        <rect key="frame" x="108" y="0.0" width="207" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="20" maxY="0.0"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="25" maxY="0.0"/>
+                                                        <state key="normal" title="15737936517" image="phoneCall">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="0.93323183060000003" green="0.93339174989999996" blue="0.93322181699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w4v-OL-zyR">
-                                        <rect key="frame" x="80" y="270" width="215" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w4v-OL-zyR">
+                                        <rect key="frame" x="80" y="314" width="215" height="40"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -554,10 +584,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="4E5-ih-FLh"/>
                     <connections>
+                        <outlet property="exitBtn" destination="w4v-OL-zyR" id="RYL-FS-H58"/>
                         <outlet property="headImgView" destination="ijg-1m-Mzz" id="Tef-s7-Pqu"/>
                         <outlet property="namePhoneLab" destination="WRB-nb-RAt" id="rBG-rW-dRS"/>
                         <outlet property="otherInfoLab" destination="j04-tZ-JK7" id="Y1H-LX-lat"/>
-                        <outlet property="shopLab" destination="nKc-4B-LbT" id="8UU-gt-YmT"/>
+                        <outlet property="phoneBtn" destination="Jib-rM-UoO" id="q8T-9A-jCF"/>
+                        <outlet property="phoneView" destination="Pk2-pz-rP0" id="LtD-dP-1pZ"/>
+                        <outlet property="shopBtn" destination="nKc-4B-LbT" id="EXs-rO-p7x"/>
+                        <outlet property="shopView" destination="b5E-Vu-iaY" id="6HF-CI-SGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hvf-i2-anI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -621,6 +655,7 @@
         <image name="order" width="20" height="20"/>
         <image name="order_selected" width="20" height="20"/>
         <image name="password" width="18" height="20"/>
-        <image name="phone" width="24" height="24"/>
+        <image name="phone" width="15" height="20"/>
+        <image name="phoneCall" width="16" height="16"/>
     </resources>
 </document>
