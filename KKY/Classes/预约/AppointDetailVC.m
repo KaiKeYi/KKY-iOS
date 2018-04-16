@@ -187,6 +187,9 @@
             selectView.doneBlock = ^(NSInteger index) {
                 _selectTeacherInfo = _teacherArr[index];
                 for (int i = 0; i<_timeArr.count; i++) {
+                    
+                    TimeInfo *info = _timeArr[i];
+                    
                     UIButton *btn = [self.view viewWithTag:10000+i];
                     UIImageView *imgView = [self.view viewWithTag:20000+i];
                     if (i==_selectTimeIndex) {
@@ -196,7 +199,7 @@
                     } else {
                         imgView.hidden = YES;
                         btn.layer.borderColor = BorderGrayColor.CGColor;
-                        [btn setTitle:[NSString stringWithFormat:@"%@ 请选择",_selectTimeInfo.time_start] forState:UIControlStateNormal];
+                        [btn setTitle:[NSString stringWithFormat:@"%@ 请选择",info.time_start] forState:UIControlStateNormal];
                     }
                 }
             };
@@ -248,11 +251,47 @@
 //立即预约
 - (IBAction)orderAction:(id)sender {
     
+    if (_selectTimeInfo==nil) {
+        [Utils showToast:@"请选择时间"];
+        return;
+    }
+    if (_selectTeacherInfo==nil) {
+        [Utils showToast:@"请选择老师"];
+        return;
+    }
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                         self.info.course, @"course",
+                         self.info.classroom, @"classroom",
+                         _selectDateInfo.date, @"date",
+                         _selectTimeInfo.time_start, @"time_start",
+                         _selectTeacherInfo.tid, @"tid",
+                         [UserInfo share].token, @"token",
+                         [UserInfo share].dealerno, @"dealerno",
+                         nil];
+
+    [[NetworkManager sharedManager] postJSON:URL_OrderAdd parameters:dic imageDataArr:nil imageName:nil completion:^(id responseData, RequestState status, NSError *error) {
+
+        if (status == Request_Success) {
+
+            [Utils showToast:@"预约成功"];
+            [self.navigationController popToRootViewControllerAnimated:NO];
+        }
+    }];
 }
 
 //清空
 - (IBAction)clearAction:(id)sender {
     
+    TimeInfo *info = _timeArr[_selectTimeIndex];
+    UIButton *btn = [self.view viewWithTag:10000+_selectTimeIndex];
+    UIImageView *imgView = [self.view viewWithTag:20000+_selectTimeIndex];
+    imgView.hidden = YES;
+    btn.layer.borderColor = BorderGrayColor.CGColor;
+    [btn setTitle:[NSString stringWithFormat:@"%@ 请选择",info.time_start] forState:UIControlStateNormal];
+    
+    _selectTimeInfo = nil;
+    _selectTeacherInfo = nil;
+    _selectTimeIndex = 0;
 }
 
 - (void)didReceiveMemoryWarning {

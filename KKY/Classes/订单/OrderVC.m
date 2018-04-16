@@ -17,6 +17,12 @@
 
 @implementation OrderVC
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self getData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -24,8 +30,6 @@
     self.title = @"订单";
     
     _dataArr = [NSMutableArray array];
-    
-    [self getData];
 }
 
 - (void)getData {
