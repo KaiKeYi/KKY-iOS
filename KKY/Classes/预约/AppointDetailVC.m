@@ -81,7 +81,7 @@
                 dateBtn.tag = 1000+i;
                 [dateBtn setTitle:[NSString stringWithFormat:@"%@\n%@",info.week_name,info.date_name] forState:UIControlStateNormal];
                 [dateBtn setTitleColor:BlackColor forState:UIControlStateNormal];
-                dateBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+                dateBtn.titleLabel.font = [UIFont systemFontOfSize:12];
                 dateBtn.titleLabel.numberOfLines=0;
                 dateBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
                 [dateBtn addTarget:self action:@selector(selectDate:) forControlEvents:UIControlEventTouchUpInside];

@@ -75,7 +75,7 @@
         [btn setTitle:self.contentArr[i] forState:UIControlStateNormal];
         [btn setTitleColor:BlackColor forState:UIControlStateNormal];
         btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-        btn.titleLabel.font = [UIFont systemFontOfSize:12];
+        btn.titleLabel.font = [UIFont systemFontOfSize:13];
         [btn addTarget:self action:@selector(doneAction:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = 100+i;
         [itemView addSubview:btn];

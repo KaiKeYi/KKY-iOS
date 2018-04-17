@@ -98,7 +98,7 @@
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = dataArr[row];
-    label.font = [UIFont systemFontOfSize:14];
+    label.font = [UIFont systemFontOfSize:15];
     [view addSubview:label];
     return view;
 }
