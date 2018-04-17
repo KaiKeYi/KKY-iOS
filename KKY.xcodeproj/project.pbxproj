@@ -794,7 +794,7 @@
 				TargetAttributes = {
 					9681CF6B206CCE76003DAD1C = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					9681CF83206CCE76003DAD1C = {
 						CreatedOnToolsVersion = 9.2;
@@ -1135,8 +1135,7 @@
 			baseConfigurationReference = 352018A7BF045C3D4AF927CD /* Pods-KKY.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KPJVYXL9VV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1154,6 +1153,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.yikai.KKY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b6cb23e9-c628-4c5d-aca7-17111fb944aa";
+				PROVISIONING_PROFILE_SPECIFIER = KKYDev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1163,8 +1164,8 @@
 			baseConfigurationReference = 72703008C7C616A021221A9B /* Pods-KKY.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = KPJVYXL9VV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1182,6 +1183,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.yikai.KKY;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "06bdced1-ea7d-4d7e-8f75-a2a17b6ce68f";
+				PROVISIONING_PROFILE_SPECIFIER = KKYDis;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
