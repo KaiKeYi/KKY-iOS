@@ -81,7 +81,7 @@
                 dateBtn.tag = 1000+i;
                 [dateBtn setTitle:[NSString stringWithFormat:@"%@\n%@",info.week_name,info.date_name] forState:UIControlStateNormal];
                 [dateBtn setTitleColor:BlackColor forState:UIControlStateNormal];
-                dateBtn.titleLabel.font = [UIFont systemFontOfSize:12];
+                dateBtn.titleLabel.font = [UIFont systemFontOfSize:13];
                 dateBtn.titleLabel.numberOfLines=0;
                 dateBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
                 [dateBtn addTarget:self action:@selector(selectDate:) forControlEvents:UIControlEventTouchUpInside];
@@ -121,7 +121,7 @@
             [self.timeView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
             
             if (_timeArr.count==0) {
-                self.courseView.frame = CGRectMake(10, 155, WIDTH-20, 80);
+                self.courseView.frame = CGRectMake(10, 160, WIDTH-20, 80);
             } else {
                 CGFloat itemTimeWidth = self.dateScrollView.width/2;
                 CGFloat itemTimeHeight = 50;
@@ -139,7 +139,7 @@
                     [btn setTitle:[NSString stringWithFormat:@"%@ 请选择",info.time_start] forState:UIControlStateNormal];
                     [btn setTitleColor:BlackColor forState:UIControlStateNormal];
                     btn.titleLabel.textAlignment = NSTextAlignmentCenter;
-                    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+                    btn.titleLabel.font = [UIFont systemFontOfSize:13];
                     [btn addTarget:self action:@selector(selectTime:) forControlEvents:UIControlEventTouchUpInside];
                     btn.tag = 10000+i;
                     [bgView addSubview:btn];
@@ -152,8 +152,8 @@
                     
                     if (i == _timeArr.count-1) {
                         self.timeView.frame = CGRectMake(0, 61, WIDTH-20, (i/2+1)*itemTimeHeight);
-                        self.courseView.frame = CGRectMake(10, 155, WIDTH-20, 80+(i/2+1)*itemTimeHeight);
-                        self.scrollView.contentSize = CGSizeMake(WIDTH, 155+self.courseView.height+55);
+                        self.courseView.frame = CGRectMake(10, 160, WIDTH-20, 80+(i/2+1)*itemTimeHeight);
+                        self.scrollView.contentSize = CGSizeMake(WIDTH, 160+self.courseView.height+55);
                     }
                 }
             }

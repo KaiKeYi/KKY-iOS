@@ -43,6 +43,8 @@
         self.window.rootViewController = nc;
     }
 
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12]} forState:UIControlStateNormal];
+    
     [self.window makeKeyAndVisible];
 
     return YES;

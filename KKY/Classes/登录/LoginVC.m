@@ -114,8 +114,6 @@
             if (self.buttonBlock) {
                 self.buttonBlock();
             }
-        } else {
-            [Utils showToast:@"登录失败"];
         }
     }];
 }
