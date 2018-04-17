@@ -41,6 +41,8 @@
     _timeArr = [NSMutableArray array];
     _teacherArr = [NSMutableArray array];
     self.scrollView.frame = CGRectMake(0, kNavBarH, WIDTH, HEIGHT-kNavBarH);
+    self.orderBtn.frame = CGRectMake(70, HEIGHT-kTabBarSafeH-50, WIDTH-140, 40);
+    self.clearBtn.frame = CGRectMake(WIDTH-50, HEIGHT-kTabBarSafeH-50, 40, 40);
     
     [self getDateList];
     

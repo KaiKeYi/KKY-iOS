@@ -9,10 +9,13 @@
 #import "OrderVC.h"
 #import "OrderCell.h"
 
-@interface OrderVC ()
+@interface OrderVC ()<RefreshDelegate>
 {
     NSMutableArray *_dataArr;
 }
+
+@property (nonatomic,retain) DefaultView *defaultView; //默认视图
+
 @end
 
 @implementation OrderVC
@@ -20,6 +23,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [self blankView];
     [self getData];
 }
 
@@ -30,6 +34,21 @@
     self.title = @"订单";
     
     _dataArr = [NSMutableArray array];
+}
+
+//无订单
+- (void)blankView {
+    _defaultView = [[DefaultView alloc] initWithFrame:CGRectMake(0, kNavBarH, WIDTH, HEIGHT-kNavBarH-kTabBarH)];
+    _defaultView.delegate = self;
+    _defaultView.hidden = YES;
+    [self.view addSubview:_defaultView];
+}
+
+#pragma mark - RefreshDelegate
+
+- (void)refresh {
+    _defaultView.hidden = YES;
+    [self getData];
 }
 
 - (void)getData {
@@ -45,7 +64,14 @@
             
             _dataArr = [OrderInfo mj_objectArrayWithKeyValuesArray:(NSArray *)responseData];
             
-            [_orderTableView reloadData];
+            if (_dataArr.count>0) {
+                _defaultView.hidden = YES;
+                [_orderTableView reloadData];
+            } else {
+                _defaultView.hidden = NO;
+                _defaultView.imgView.image = [UIImage imageNamed:@"null-page-draw"];
+                _defaultView.lab.text = @"您还没有订单";
+            }
         }
     }];
 }

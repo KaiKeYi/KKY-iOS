@@ -389,7 +389,7 @@
                                 </subviews>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wyx-B5-kMh">
-                                <rect key="frame" x="70" y="622" width="235" height="35"/>
+                                <rect key="frame" x="70" y="617" width="235" height="40"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.13345146179199219" green="0.71650010347366333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -406,7 +406,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zYy-ac-2xq">
-                                <rect key="frame" x="325" y="621" width="40" height="36"/>
+                                <rect key="frame" x="325" y="617" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.90970492362976074" green="0.90986090898513794" blue="0.9096950888633728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -425,6 +425,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="clearBtn" destination="zYy-ac-2xq" id="Tf7-oF-U6d"/>
                         <outlet property="countLab" destination="Cer-LD-Nab" id="WKR-Uy-dcK"/>
                         <outlet property="courseLab" destination="MBI-C9-y5a" id="O2H-Fd-WnX"/>
                         <outlet property="courseView" destination="UOY-DP-RaJ" id="Fj8-ke-kd8"/>
@@ -432,6 +433,7 @@
                         <outlet property="dateScrollView" destination="jZt-B3-U8L" id="zZT-q2-JFU"/>
                         <outlet property="dividerView" destination="bzd-Z1-PJd" id="GCa-Yy-ikK"/>
                         <outlet property="imgView" destination="AfH-FF-2hT" id="N6D-fX-FWW"/>
+                        <outlet property="orderBtn" destination="wyx-B5-kMh" id="m92-hn-het"/>
                         <outlet property="scrollView" destination="bCL-OC-BP3" id="uI4-eZ-J8S"/>
                         <outlet property="teacherLab" destination="LoL-Jo-Sjm" id="jjn-Mt-ZHl"/>
                         <outlet property="timeView" destination="4Sf-Z9-a7M" id="eU8-84-yp6"/>

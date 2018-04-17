@@ -64,7 +64,7 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.navigationController.automaticallyAdjustsScrollViewInsets = NO;
-    self.tableFrame = CGRectMake(0, 64, WIDTH, HEIGHT-64);
+    self.tableFrame = CGRectMake(0, kNavBarH, WIDTH, HEIGHT-kNavBarH);
     
     [self setNavBar];
     
@@ -98,7 +98,7 @@
 #pragma mark - 自定义导航条
 - (void)setNavBar {
     
-    self.navBar = [[BaseNavBar alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 64.0)];
+    self.navBar = [[BaseNavBar alloc] initWithFrame:CGRectMake(0, 0, WIDTH, kNavBarH)];
     self.navBar.translucent = NO;
     self.navBar.barTintColor = WhiteColor;
     [self.navBar setTitleTextAttributes:

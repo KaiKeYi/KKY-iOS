@@ -50,6 +50,8 @@
 #define HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define kNavBarH (IS_IPhoneX?88:64)
 #define kStatusBarH (IS_IPhoneX?44:20)
+#define kTabBarH (IS_IPhoneX?83:49)
+#define kTabBarSafeH (IS_IPhoneX?34:0)
 #define IS_IOS_11 ([[[UIDevice currentDevice] systemVersion] floatValue]>=11.0)
 #define IS_IPhoneX (CGSizeEqualToSize(CGSizeMake(375.f, 812.f), [UIScreen mainScreen].bounds.size) || CGSizeEqualToSize(CGSizeMake(812.f, 375.f), [UIScreen mainScreen].bounds.size))
 

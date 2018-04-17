@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet BaseScrollView *dateScrollView;
 @property (weak, nonatomic) IBOutlet UIView *dividerView;
 @property (weak, nonatomic) IBOutlet UIView *timeView;
+@property (weak, nonatomic) IBOutlet UIButton *orderBtn;
+@property (weak, nonatomic) IBOutlet UIButton *clearBtn;
 
 - (IBAction)orderAction:(id)sender;
 - (IBAction)clearAction:(id)sender;
