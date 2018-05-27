@@ -345,7 +345,6 @@
 				9681D017206CF8DD003DAD1C /* Model */,
 				9681CFAC206CF8DC003DAD1C /* Tools */,
 				9681CF94206CF8DC003DAD1C /* Category */,
-				9681D018206CF8DD003DAD1C /* ThirdParty */,
 				9681D093206D0505003DAD1C /* Supporting Files */,
 			);
 			path = KKY;
@@ -672,13 +671,6 @@
 				96CBBAEF20809E1B008E0F66 /* TeacherInfo.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		9681D018206CF8DD003DAD1C /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 		9681D083206D01CC003DAD1C /* 订单 */ = {

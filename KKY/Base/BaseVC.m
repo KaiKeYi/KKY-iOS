@@ -141,7 +141,7 @@
 }
 
 #pragma mark - 动画下拉刷新/上拉加载更多
-- (void)tableViewGifHeaderWithRefreshingBlock:(void(^)(void)) block {
+- (void)tableView:(UITableView *)tableView gifHeaderWithRefreshingBlock:(void(^)(void)) block {
     
     //设置即将刷新状态的动画图片
     NSMutableArray *refreshingImages = [NSMutableArray array];
@@ -162,14 +162,14 @@
     [gifHeader setImages:@[refreshingImages[0]] forState:MJRefreshStateIdle];
     [gifHeader setImages:refreshingImages forState:MJRefreshStatePulling];
     [gifHeader setImages:refreshingImages forState:MJRefreshStateRefreshing];
-    _tableView.mj_header = gifHeader;
+    tableView.mj_header = gifHeader;
 }
 
-- (void)tableViewGifFooterWithRefreshingBlock:(void(^)(void)) block {
+- (void)tableView:(UITableView *)tableView gifFooterWithRefreshingBlock:(void(^)(void)) block {
     
     NSMutableArray *footerImages = [NSMutableArray array];
     for (int i = 1; i <= 21; i++) {
-        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"ic_refresh_image_0%zd",i]];
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"ic_refresh_image_0%d",i]];
         [footerImages addObject:image];
     }
     
@@ -184,7 +184,7 @@
     
     [gifFooter setImages:@[footerImages[0]] forState:MJRefreshStateIdle];
     [gifFooter setImages:footerImages forState:MJRefreshStateRefreshing];
-    _tableView.mj_footer = gifFooter;
+    tableView.mj_footer = gifFooter;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {

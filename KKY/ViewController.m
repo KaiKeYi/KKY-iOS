@@ -48,13 +48,13 @@
     //[self.tableView.mj_header beginRefreshing];
     
     //动画下拉刷新
-    [self tableViewGifHeaderWithRefreshingBlock:^{
+    [self tableView:self.tableView gifHeaderWithRefreshingBlock:^{
         [self getData];
     }];
     [self.tableView.mj_header beginRefreshing];
     
     //动画加载更多
-    [self tableViewGifFooterWithRefreshingBlock:^{
+    [self tableView:self.tableView gifFooterWithRefreshingBlock:^{
         [self loadMoreData];
     }];
 }

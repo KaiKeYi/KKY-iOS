@@ -50,12 +50,12 @@
 /*!
  *  @brief 下拉刷新
  */
-- (void)tableViewGifHeaderWithRefreshingBlock:(void(^)(void)) block;
+- (void)tableView:(UITableView *)tableView gifHeaderWithRefreshingBlock:(void(^)(void)) block;
 
 /*!
  *  @brief 上拉加载
  */
-- (void)tableViewGifFooterWithRefreshingBlock:(void(^)(void)) block;
+- (void)tableView:(UITableView *)tableView gifFooterWithRefreshingBlock:(void(^)(void)) block;
 
 /**
  *  短信验证码按钮封装

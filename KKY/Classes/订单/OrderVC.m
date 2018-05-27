@@ -8,10 +8,12 @@
 
 #import "OrderVC.h"
 #import "OrderCell.h"
+#import <MJRefresh.h>
 
 @interface OrderVC ()<RefreshDelegate>
 {
     NSMutableArray *_dataArr;
+    NSInteger _currentPage;
 }
 
 @property (nonatomic,retain) DefaultView *defaultView; //默认视图
@@ -20,13 +22,6 @@
 
 @implementation OrderVC
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self blankView];
-    [self getData];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -34,6 +29,32 @@
     self.title = @"订单";
     
     _dataArr = [NSMutableArray array];
+    _currentPage = 1;
+    
+    [self blankView];
+    [self getData:_currentPage];
+    
+    //动画下拉刷新
+    [self tableView:_orderTableView gifHeaderWithRefreshingBlock:^{
+        [self refreshData];
+    }];
+    
+    //动画加载更多
+    [self tableView:_orderTableView gifFooterWithRefreshingBlock:^{
+        [self loadMoreData];
+    }];
+}
+
+//刷新数据
+- (void)refreshData {
+    _currentPage = 1;
+    [self getData:_currentPage];
+}
+
+//加载更多数据
+- (void)loadMoreData {
+    _currentPage++;
+    [self getData:_currentPage];
 }
 
 //无订单
@@ -47,28 +68,48 @@
 #pragma mark - RefreshDelegate
 
 - (void)refresh {
-    _defaultView.hidden = YES;
-    [self getData];
+    [self refreshData];
 }
 
-- (void)getData {
+- (void)getData:(NSInteger)currPage {
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         @"1", @"page",
+                         [NSString stringWithFormat:@"%ld",(long)currPage], @"page",
                          [UserInfo share].token, @"token",
                          [UserInfo share].dealerno, @"dealerno",
                          nil];
     [[NetworkManager sharedManager] postJSON:URL_OrderList parameters:dic imageDataArr:nil imageName:nil completion:^(id responseData, RequestState status, NSError *error) {
         
+        [self.orderTableView.mj_header endRefreshing];
+        [self.orderTableView.mj_footer endRefreshing];
+        
         if (status == Request_Success) {
             
-            _dataArr = [OrderInfo mj_objectArrayWithKeyValuesArray:(NSArray *)responseData];
+            if (currPage == 1) {
+                [_dataArr removeAllObjects];
+            }
+
+            NSMutableArray *array = [OrderInfo mj_objectArrayWithKeyValuesArray:(NSArray *)responseData];
+            [_dataArr addObjectsFromArray:array];
             
             if (_dataArr.count>0) {
+            
+                if (array.count>0) {
+                    [self tableView:_orderTableView gifFooterWithRefreshingBlock:^{
+                        [self loadMoreData];
+                    }];
+                } else {
+                    _orderTableView.mj_footer = nil;
+                }
+                
+                _orderTableView.hidden = NO;
                 _defaultView.hidden = YES;
                 [_orderTableView reloadData];
+                
             } else {
+                _orderTableView.hidden = YES;
                 _defaultView.hidden = NO;
+                _defaultView.delegate = nil;
                 _defaultView.imgView.image = [UIImage imageNamed:@"null-page-draw"];
                 _defaultView.lab.text = @"您还没有订单";
             }
